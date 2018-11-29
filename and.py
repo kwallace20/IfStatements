@@ -8,5 +8,5 @@ while x == 1:
 	reading17 = RPL.digitalRead(17)
 	if reading16 == 0 and reading17 == 0:
 		RPL.servoWrite(0, 1590)
-	elif reading16 == 1 and reading17 == 1:
+	elif reading16 == 1 or reading17 == 1:
 		RPL.servoWrite(0, 1500)
