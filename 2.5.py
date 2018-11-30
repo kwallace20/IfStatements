@@ -21,4 +21,16 @@ def right():
 def both():
      RPL.servoWrite(L,1590)
      RPL.servoWrite(R,1410)
-
+def none():
+     RPL.servoWrite(L,1500)
+     RPL.servoWrite(R,1500)
+while x == 1:
+     readingL = RPL.digitalRead(LS)
+     readingR = RPL.digitalRead(RS)
+     if readingL == 0 and readingR == 0:
+          both()
+     elif readingL == 1 and readingR == 1:
+          none()
+     else:
+          left()
+          right()
